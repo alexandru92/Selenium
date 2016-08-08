@@ -11,7 +11,7 @@ namespace SeleniumWebdriver.Demoqa.com.Registration
     public class RegistrationPageObject
     {
         private readonly IWebDriver webdriver;
-        private readonly string url = @"http://http://demoqa.com/registration/";
+        private readonly string url = @"http://demoqa.com/registration/";
         public RegistrationPageObject(IWebDriver registrationdriver)
         {
             this.webdriver = registrationdriver;
@@ -26,8 +26,8 @@ namespace SeleniumWebdriver.Demoqa.com.Registration
         [FindsBy(How = How.ClassName, Using = "input_fields  radio_fields")]
         IWebElement SingleRadioField { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "radio_wrap")]
-        IWebElement CheckBox { get; set; }
+        [FindsBy(How = How.XPath, Using = "//input[@value='dance']")]
+        IWebElement CheckBoxDance { get; set; }
 
         [FindsBy(How = How.Id, Using = "dropdown_7")]
         IWebElement CountryDropDown { get; set; }
@@ -69,10 +69,21 @@ namespace SeleniumWebdriver.Demoqa.com.Registration
         {
             webdriver.Navigate().GoToUrl(url);
         }
+        public void FillRegistration(string firstname, string lastname, string maritalstatus, string hobby, string country, string month, string day, string year, int phonenumber, string username, string email, string profilepicfile, string description, string password, string passwordconfirm)
+        {
+            Fnamefield.Clear();
+            Fnamefield.SendKeys(firstname);
+            Lnamefield.Clear();
+            Lnamefield.SendKeys(lastname);
+            SingleRadioField.Click();
+            CheckBoxDance.Clear();
+            CheckBoxDance.Click();
+            CountryDropDown.Click();
+            MonthDD.Click();
+            DayDD.Click();
+            YearDD.Click();
+
+        }
     }
 
-    public void FillRegistration(string firstname, string lastname, string maritalstatus, string hobby, )
-    {
-
-    }
 }
