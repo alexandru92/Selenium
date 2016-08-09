@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SeleniumWebdriver.Demoqa.com.Registration
@@ -27,11 +28,35 @@ namespace SeleniumWebdriver.Demoqa.com.Registration
         {
             RegistrationPageObject regpage = new RegistrationPageObject(Driver);
             regpage.Navigate();
-            regpage.FillRegistration("","","","","","","","",1,"","","","","","");
+            regpage.FillRegistration("alex", "ap", "0845163580", "aaaaas5afasaaaaaa", "aaaaaaaaalaasaaaaaaa@yahoo.com", "text text text", "12345Alex", "12345Alex");
+            Thread.Sleep(1000);
+            regpage.clicks();
+            Thread.Sleep(1000);
+            regpage.uploadpic(Driver);
+
+            //Assert.IsTrue(Driver.FindElement(By.ClassName("piereg_message")).Displayed);
+            if (Driver.FindElement(By.XPath("/html/body/div/div/div[1]/main/article/div/p")).Text.Equals("Thank you for your registration"))
+            {
+                try
+                {
+                    Assert.IsTrue(true,"Registration succes");
+                }
+                catch (Exception ex)
+                {
+                    hlp.LogError(ex);
+                }
+            }
+
+            else /*if (Driver.FindElement(By.LinkText("Username already exists")).Displayed)*/
+            {
+                string msg = "Test failed, username already exists";
+                Assert.Fail(msg);
+            }
         }
         [TestCleanup]
         public void TestCleanup()
         {
+            Console.ReadLine();
             Driver.Close();
         }
 
