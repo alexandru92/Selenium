@@ -23,7 +23,6 @@ namespace SeleniumWebdriver.FbLoginTest
         {
             Driver.Quit();
         }
-
         [TestMethod]
 
         public void Login()

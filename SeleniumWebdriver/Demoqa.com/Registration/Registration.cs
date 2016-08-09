@@ -28,7 +28,7 @@ namespace SeleniumWebdriver.Demoqa.com.Registration
         {
             RegistrationPageObject regpage = new RegistrationPageObject(Driver);
             regpage.Navigate();
-            regpage.FillRegistration("alex", "ap", "0845163580", "aaaaas5afasaaaaaa", "aaaaaaaaalaasaaaaaaa@yahoo.com", "text text text", "12345Alex", "12345Alex");
+            regpage.FillRegistration("alex", "aap", "0845163580", "aaaaaas5afasaaaaaa", "aaaaaaaaaalaasaaaaaaa@yahoo.com", "text text text", "12345Alex", "12345Alex");
             Thread.Sleep(1000);
             regpage.clicks();
             Thread.Sleep(1000);

@@ -1,6 +1,5 @@
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Debug\SeleniumWebdriver.dll
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Debug\SeleniumWebdriver.pdb
-c:\users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Debug\nunit.framework.dll
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Debug\WebDriver.dll
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Debug\WebDriver.Support.dll

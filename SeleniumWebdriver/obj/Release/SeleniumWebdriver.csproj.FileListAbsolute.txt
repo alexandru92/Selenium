@@ -1,0 +1,13 @@
+C:\Users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Release\SeleniumWebdriver.dll
+C:\Users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Release\SeleniumWebdriver.pdb
+C:\Users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Release\nunit.framework.dll
+C:\Users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Release\WebDriver.dll
+C:\Users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Release\WebDriver.Support.dll
+C:\Users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Release\LogHelper.pdb
+C:\Users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Release\nunit.framework.xml
+C:\Users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Release\WebDriver.xml
+C:\Users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Release\WebDriver.Support.xml
+C:\Users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\obj\Release\SeleniumWebdriver.csprojResolveAssemblyReference.cache
+C:\Users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\obj\Release\SeleniumWebdriver.dll
+C:\Users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\obj\Release\SeleniumWebdriver.pdb
+C:\Users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Release\LogHelper.exe

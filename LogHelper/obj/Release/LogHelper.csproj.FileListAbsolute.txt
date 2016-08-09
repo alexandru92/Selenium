@@ -1,0 +1,5 @@
+C:\Users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\LogHelper\bin\Release\LogHelper.pdb
+C:\Users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\LogHelper\obj\Release\LogHelper.csprojResolveAssemblyReference.cache
+C:\Users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\LogHelper\obj\Release\LogHelper.pdb
+C:\Users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\LogHelper\bin\Release\LogHelper.exe
+C:\Users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\LogHelper\obj\Release\LogHelper.exe

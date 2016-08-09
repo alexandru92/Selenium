@@ -26,5 +26,10 @@ namespace LogHelper
                 writer.WriteLine(Environment.NewLine + "-----------------------------------------------------------------------------" + Environment.NewLine);
             }
         }
+        public static void Main()
+        {
+            LogHelper hlp = new LogHelper();
+        }
     }
+
 }
