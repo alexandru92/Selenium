@@ -1,6 +1,8 @@
-﻿using OpenQA.Selenium;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.PageObjects;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -29,10 +31,10 @@ namespace SeleniumWebdriver.Demoqa.com.Registration
         IWebElement Lnamefield { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//input[@value='single']")]
-        IWebElement SingleRadioField { get; set; }
+        IList<IWebElement> SingleRadioField { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//input[@value='dance']")]
-        IWebElement CheckBoxDance { get; set; }
+        IList<IWebElement> CheckBoxDance { get; set; }
 
         [FindsBy(How = How.Id, Using = "dropdown_7")]
         IWebElement CountryDropDown { get; set; }
@@ -44,7 +46,7 @@ namespace SeleniumWebdriver.Demoqa.com.Registration
         IWebElement February { get; set; }
 
         [FindsBy(How = How.Id, Using = "mm_date_8")]
-        IWebElement MonthDD { get; set; }
+        IList<IWebElement> MonthDD { get; set; }
 
         [FindsBy(How = How.Id, Using = "dd_date_8")]
         IWebElement DayDD { get; set; }
@@ -88,12 +90,19 @@ namespace SeleniumWebdriver.Demoqa.com.Registration
         }
         public void clicks()
         {
-            SingleRadioField.Click();
-            CheckBoxDance.Click();
-            CountryDropDown.Click();
-            SelectRoCountry.Click();
+            if (!SingleRadioField.ElementAt(0).Selected)
+            {
+                SingleRadioField.ElementAt(0).Click();
+            }
+
+            if (!CheckBoxDance.ElementAt(0).Selected)
+            {
+                CheckBoxDance.ElementAt(0).Click();
+            }
+            SelectElement elementselected = new SelectElement(CountryDropDown);
+            elementselected.SelectByText("Romania");
             Thread.Sleep(1000);
-            MonthDD.Click();
+            February.Click();
             Thread.Sleep(1000);
             February.Click();
             DayDD.Click();
@@ -116,6 +125,27 @@ namespace SeleniumWebdriver.Demoqa.com.Registration
             PasswordConfirm.SendKeys(passwordconfirm);
         }
 
+        public void Months12()
+        {
+            SelectElement elementselected = new SelectElement(webdriver.FindElement(By.Id("mm_date_8")));
+            IList<IWebElement> elementcount = elementselected.Options;
+            int countmonths = elementcount.Count();
+
+            for (int i = 1; i < countmonths; i++)
+            {
+                if (countmonths == 13)
+                {
+                    string okmsg = "12 months in list and month text";
+                    Assert.IsTrue(countmonths == 13, okmsg);
+                }
+                else
+                {
+                    string errmsg = "Month list changed";
+                    Assert.Fail(errmsg, countmonths);
+                }
+            }
+        }
+        
         public void uploadpic(IWebDriver driver)
         {
             //File.Exists(url);

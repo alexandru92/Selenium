@@ -28,9 +28,13 @@ namespace SeleniumWebdriver.Demoqa.com.Registration
         {
             RegistrationPageObject regpage = new RegistrationPageObject(Driver);
             regpage.Navigate();
-            regpage.FillRegistration("alex", "aap", "0845163580", "aaaaaas5afasaaaaaa", "aaaaaaaaaalaasaaaaaaa@yahoo.com", "text text text", "12345Alex", "12345Alex");
+            regpage.FillRegistration("alex", "aap", "0845163580", "dxglzcvvxaa", "m1wcvxzgxc@yahoo.com", "text text text", "12345Alex", "12345Alex");
             Thread.Sleep(1000);
             regpage.clicks();
+            Thread.Sleep(1000);
+            regpage.Months12();
+            
+            //regpage.HobbyListVerify();
             Thread.Sleep(1000);
             regpage.uploadpic(Driver);
 
@@ -39,7 +43,7 @@ namespace SeleniumWebdriver.Demoqa.com.Registration
             {
                 try
                 {
-                    Assert.IsTrue(true,"Registration succes");
+                    Assert.IsTrue(true, "Registration succes");
                 }
                 catch (Exception ex)
                 {
