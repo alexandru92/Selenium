@@ -18,12 +18,12 @@ namespace SeleniumWebdriver.Demoqa.com.AttributeColor
         private static string url = "http://toolsqa.com/automation-practice-switch-windows/";
         public CheckAttribute(IWebDriver driver)
         {
-            
+
             this.webdriver = driver;
             PageFactory.InitElements(driver, this);
         }
 
-        [FindsBy(How = How.Id, Using = "colorVar")]
+        [FindsBy(How = How.XPath, Using = "//button[@id='colorVar']")]
         IWebElement Attribute { get; set; }
         public void NavigateUrl()
         {
@@ -32,13 +32,14 @@ namespace SeleniumWebdriver.Demoqa.com.AttributeColor
 
         public void AttributeCheck()
         {
+            string colorwaited = "rgba(255, 0, 0, 1)";
             WebDriverWait wait = new WebDriverWait(webdriver, TimeSpan.FromSeconds(10));
-            string color = Attribute.GetAttribute("color");
-           
-            if (color.Equals("red"))
+            string clr = webdriver.FindElement(By.XPath("//button[@id='colorVar']")).GetCssValue("color");
+            if (clr == colorwaited)
             {
                 string msg = "color red";
                 Assert.IsTrue(true, msg);
+                Console.WriteLine("color red" + msg);
             }
             else
             {

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SeleniumWebdriver.Demoqa.com.findall
-{
+{// 36 anchor links in page
     public class AllLinks
     {
         LogHelper.LogHelper hlp = new LogHelper.LogHelper();
@@ -33,7 +33,7 @@ namespace SeleniumWebdriver.Demoqa.com.findall
             {
                 for (int i = 1; i < Links.Count; i = i+1)
                 {
-                    ;
+                    
                     Console.WriteLine("nr" + Links.ToString() + Links.Count());
                 }
             }

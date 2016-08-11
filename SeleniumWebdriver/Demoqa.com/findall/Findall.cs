@@ -30,8 +30,7 @@ namespace SeleniumWebdriver.Demoqa.com.findall
             AllLinks lnk = new AllLinks(Driver);
             lnk.Navigate();
             lnk.findAll();
-        
-                   
+
         }
     }
 }

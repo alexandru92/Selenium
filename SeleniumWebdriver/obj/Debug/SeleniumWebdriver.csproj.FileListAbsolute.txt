@@ -11,3 +11,5 @@ c:\users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriv
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\obj\Debug\SeleniumWebdriver.pdb
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Debug\LogHelper.pdb
 C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Debug\LogHelper.exe
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Debug\Newtonsoft.Json.dll
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\SeleniumWebdriver\SeleniumWebdriver\bin\Debug\Newtonsoft.Json.xml
