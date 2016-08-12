@@ -18,7 +18,7 @@ namespace SeleniumWebdriver.FbLoginTest
         [FindsBy(How = How.Id, Using = "pass")]
         public IWebElement PasswordBox { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@id='u_0_m']")]
+        [FindsBy(How = How.XPath, Using = "//input[@id='u_0_o']")]
         public IWebElement ClickLogin { get; set; }
 
         public void Navigate()
