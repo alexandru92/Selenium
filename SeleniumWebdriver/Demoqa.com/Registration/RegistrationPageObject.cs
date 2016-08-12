@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
+using SeleniumWebdriver.ExtensionMethods;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -101,16 +102,23 @@ namespace SeleniumWebdriver.Demoqa.com.Registration
             }
             SelectElement elementselected = new SelectElement(CountryDropDown);
             elementselected.SelectByText("Romania");
-            Thread.Sleep(1000);
-            February.Click();
-            Thread.Sleep(1000);
-            February.Click();
-            DayDD.Click();
-            Thread.Sleep(1000);
-            day19.Click();
-            YearDD.Click();
-            Thread.Sleep(1000);
-            Year1992.Click();
+            February.ClickExtAndSleep();
+            DayDD.ClicksExt();
+            day19.ClickExtAndSleep();
+            YearDD.ClicksExt();
+            Year1992.ClickExtAndSleep();
+
+            //Thread.Sleep(1000);
+            //February.Click();
+            //Thread.Sleep(1000);
+            //February.Click();
+            //DayDD.Click();
+            //Thread.Sleep(1000);
+            //day19.Click();
+            //YearDD.Click();
+            //Thread.Sleep(1000);
+         /*   YearDD.ClicksExt(); */// ext method click demo
+            
         }
         public void FillRegistration(string firstname, string lastname, string phonenumber, string username, string email, string description, string password, string passwordconfirm)
         {

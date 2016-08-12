@@ -20,6 +20,7 @@ namespace SeleniumWebdriver.Demoqa.com.HomePage
             Driver = new FirefoxDriver();
             Wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
         }
+        [Priority(1)]
         [TestMethod]
 
         public void SwitchTabs()

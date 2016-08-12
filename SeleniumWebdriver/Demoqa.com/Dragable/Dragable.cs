@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.PageObjects;
+using SeleniumWebdriver.ExtensionMethods;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,6 @@ namespace SeleniumWebdriver.Demoqa.com.Dragable
         [FindsBy(How = How.ClassName, Using = "inside_contain")]
         IWebElement insidecontainer { get; set; }
 
-
         public void OpenUrl()
         {
             driver.Navigate().GoToUrl(urldraggable);
@@ -34,12 +34,15 @@ namespace SeleniumWebdriver.Demoqa.com.Dragable
         }
 
         public void DragandDrop()
-        {
+        { //Drag and drop using extension method
             Actions act = new Actions(driver);
-            act.ClickAndHold(draggablebox);
-            act.MoveToElement(draggablebox, 289, 98).Perform();
-            act.Release(draggablebox);
-            Thread.Sleep(5000);
+            draggablebox.DragAndDropExt(200, 200, act);
+            Thread.Sleep(3000);
+
+            //Actions act = new Actions(driver);
+            //act.ClickAndHold(draggablebox);
+            //act.MoveToElement(draggablebox, 289, 98).Perform();
+            //act.Release(draggablebox);
         }
     }
 

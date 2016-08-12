@@ -1,13 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace SeleniumWebdriver.Demoqa.com.Registration
 {
@@ -22,18 +17,18 @@ namespace SeleniumWebdriver.Demoqa.com.Registration
         {
             Driver = new FirefoxDriver();
         }
-
+        [Priority(0)]
         [TestMethod]
         public void FillRegister()
         {
             RegistrationPageObject regpage = new RegistrationPageObject(Driver);
             regpage.Navigate();
-            regpage.FillRegistration("alex", "aap", "0845163580", "dxglzcvvxaa", "m1wcvxzgxc@yahoo.com", "text text text", "12345Alex", "12345Alex");
+            regpage.FillRegistration("alex", "aap", "0845163580", "dxglzcavaavxaa", "m1wcvaaxazgxc@yahoo.com", "text text text", "12345Alex", "12345Alex");
             Thread.Sleep(1000);
             regpage.clicks();
             Thread.Sleep(1000);
             regpage.Months12();
-            
+
             //regpage.HobbyListVerify();
             Thread.Sleep(1000);
             regpage.uploadpic(Driver);

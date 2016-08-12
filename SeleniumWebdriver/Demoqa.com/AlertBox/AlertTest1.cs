@@ -19,7 +19,7 @@ namespace SeleniumWebdriver.Demoqa.com.AlertBox
         {
             Driver = new FirefoxDriver();
         }
-
+        [Priority(0)]
         [TestMethod]
         public void ClickAlertBox()
         {

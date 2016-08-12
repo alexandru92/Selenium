@@ -5,6 +5,7 @@ using OpenQA.Selenium;
 
 namespace SeleniumWebdriver.Demoqa.com.ApiTest
 {
+    
     [TestClass]
     public class ApiTest
     {
@@ -16,6 +17,7 @@ namespace SeleniumWebdriver.Demoqa.com.ApiTest
         {
             Driver = new FirefoxDriver();
         }
+        [Priority(0)]
         [TestMethod]
         public void ApiTestMethod()
         {

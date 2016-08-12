@@ -24,6 +24,7 @@ namespace SeleniumWebdriver.Demoqa.com.findall
         {
             Driver.Quit();
         }
+        [Priority(1)]
         [TestMethod]
         public void SearchLinks()
         {

@@ -1,23 +1,24 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
-using System;
 
-namespace SeleniumWebdriver.FbLoginTest
-{// will fail if no email and passowrd
+namespace SeleniumWebdriver.ExtensionMethods
+{
     [TestClass]
-    public class TestLogin
+    public class LoginExtensionTest
     {
-        public IWebDriver Driver { get; set; }
-        public WebDriverWait Wait { get; set; }
+        private static IWebDriver Driver { get; set; }
 
         [TestInitialize]
         public void SetupTest()
         {
             Driver = new FirefoxDriver();
-            Wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
+
         }
+        [TestMethod]
+
         [TestCleanup]
         public void TearDownTest()
         {
@@ -25,10 +26,9 @@ namespace SeleniumWebdriver.FbLoginTest
         }
         [Priority(0)]
         [TestMethod]
-
-        public void Login()
+        public void LoginExtMethod()
         {
-            PageObjectFBPage loginfb = new PageObjectFBPage(Driver);
+            Loginextensionmethod loginfb = new Loginextensionmethod(Driver);
             loginfb.Navigate();
             string email = ""; // type your email
             string password = ""; // type your password

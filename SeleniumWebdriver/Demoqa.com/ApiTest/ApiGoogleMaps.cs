@@ -17,13 +17,14 @@ namespace SeleniumWebdriver.Demoqa.com.ApiTest
 {
     public class ApiGoogleMaps
     {
+        private static string enterkey = "SighetuMarmatiei";
+        //IWebDriver driver = new RemoteWebDriver(new Uri("http://maps.googleapis.com/maps/api/geocode/json?address=" + enterkey + "&sensor=False"), new DesiredCapabilities("firefox", CapabilityType.Version, new Platform(PlatformType.Windows)));
         LogHelper.LogHelper hlp = new LogHelper.LogHelper();
         private readonly IWebDriver webdriver;
-        private static string enterkey = "SighetuMarmatiei";
         private static string link = "http://maps.googleapis.com/maps/api/geocode/json?address=" + enterkey + "&sensor=False";
         public ApiGoogleMaps(IWebDriver driver)
         {
-            
+
             this.webdriver = driver;
             PageFactory.InitElements(driver, this);
         }
@@ -31,7 +32,7 @@ namespace SeleniumWebdriver.Demoqa.com.ApiTest
         [FindsBy(How = How.XPath, Using = "//button[@id='colorVar']")]
         IWebElement Attribute { get; set; }
 
-        
+
         public void NavigateUrl()
         {
             try
@@ -52,7 +53,7 @@ namespace SeleniumWebdriver.Demoqa.com.ApiTest
             {
                 hlp.LogError(ex);
             }
-            
+
         }
     }
 }

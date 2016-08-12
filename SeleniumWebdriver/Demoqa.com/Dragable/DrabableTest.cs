@@ -21,6 +21,7 @@ namespace SeleniumWebdriver.Demoqa.com.Dragable
         {
             Driver.Quit();
         }
+        [Priority(1)]
         [TestMethod]
         public void DragAndDrop()
         {

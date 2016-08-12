@@ -87,6 +87,9 @@
     <Compile Include="Demoqa.com\HomePage\HomePageObject.cs" />
     <Compile Include="Demoqa.com\Registration\Registration.cs" />
     <Compile Include="Demoqa.com\Registration\RegistrationPageObject.cs" />
+    <Compile Include="ExtensionMethods\Extensions.cs" />
+    <Compile Include="ExtensionMethods\Loginextensionmethod.cs" />
+    <Compile Include="ExtensionMethods\LoginExtensionTest.cs" />
     <Compile Include="FbLoginTest\PageObjectFBPage.cs" />
     <Compile Include="FbLoginTest\TestLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

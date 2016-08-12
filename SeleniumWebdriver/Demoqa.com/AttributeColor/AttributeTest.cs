@@ -17,6 +17,7 @@ namespace SeleniumWebdriver.Demoqa.com.AttributeColor
         {
             Driver = new FirefoxDriver();
         }
+        [Priority(0)]
         [TestMethod]
         public void CheckColor()
         {
